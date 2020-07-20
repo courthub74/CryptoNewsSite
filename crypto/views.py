@@ -25,7 +25,7 @@ def prices(request):
 		import json
 		quote = request.POST['quote'] #'quote' From the 'name' from the input of the search form on the base page
 		quote = quote.upper()
-		crypto_request = requests.get("https://min-api.cryptocompare.com/data/pricemultifull?fsyms=" + quote + "&tsyms=USD")
+		crypto_request = requests.get("https://min-api.cryptocompare.com/data/pricemultifull?fsyms=" + quote + "&tsyms=USD")#Here its getting every single crypto
 		crypto = json.loads(crypto_request.content)
 
 		
